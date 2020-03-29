@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="FISUDA" name="urldecode" version="0.1.0">
+
+    <details>
+        <title>Urldecode operator</title>
+        <homepage>https://github.com/lets-fiware/urldecode-operator</homepage>
+        <authors>Kazuhito Suda &lt;kazuhito@fisuda.jp&gt;</authors>
+        <email>kazuhito@fisuda.jp</email>
+        <image></image>
+        <smartphoneimage></smartphoneimage>
+        <description>Urldecode operator</description>
+        <longdescription>DESCRIPTION.md</longdescription>
+        <changelog>doc/changelog.md</changelog>
+        <doc>doc/userguide.md</doc>
+        <license>MIT</license>
+        <issuetracker>https://github.com/lets-fiware/urldecode-operator/issues</issuetracker>
+    </details>
+
+    <requirements>
+        <!-- Add any extra requirements here -->
+        <!-- <feature name="${feature-name}" /> -->
+    </requirements>
+
+    <preferences>
+        <preference name="send_nulls" type="boolean" label="Send Nulls" description="Enable this option to propagate null values, leave it disable to filter null events" default="true" />
+    </preferences>
+
+    <wiring>
+        <outputendpoint name="outputData" type="text" label="Filtered data" description="Sends the filtered data out" friendcode="json" />
+        <inputendpoint name="inputData" type="text" label="Input data"  description="Receives a JSON object" friendcode="json" />
+    </wiring>
+
+    <scripts>
+        <script src="js/main.js"/>
+    </scripts>
+
+</operator>
